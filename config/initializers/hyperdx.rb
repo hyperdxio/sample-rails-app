@@ -7,8 +7,8 @@ OpenTelemetry::SDK.configure do |c|
 end
 
 Rails.application.configure do
-  config.logger = Logger.new(STDOUT)
-  config.logger.formatter = proc do |severity, time, progname, msg|
+  Rails.logger = Logger.new(STDOUT)
+  Rails.logger.formatter = proc do |severity, time, progname, msg|
     span_id = OpenTelemetry::Trace.current_span.context.hex_span_id
     trace_id = OpenTelemetry::Trace.current_span.context.hex_trace_id
     if defined? OpenTelemetry::Trace.current_span.name
@@ -18,6 +18,6 @@ Rails.application.configure do
     end
 
     # config.logger.info(OpenTelemetry::Trace.current_span.context.hex_span_id)
-    "#{time}, #{severity}: #{msg} - trace_id=#{trace_id} - span_id=#{span_id} - operation=#{operation}\n"
+    "time=#{time} level=#{severity} msg=#{msg} trace_id=#{trace_id} span_id=#{span_id} operation=#{operation}\n"
   end
 end

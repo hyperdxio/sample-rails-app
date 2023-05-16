@@ -18,6 +18,6 @@ Rails.application.configure do
     end
 
     # config.logger.info(OpenTelemetry::Trace.current_span.context.hex_span_id)
-    "time=#{time} level=#{severity} msg=#{msg} trace_id=#{trace_id} span_id=#{span_id} operation=#{operation}\n"
+    "time='#{time}' level=#{severity} msg='#{msg}' trace_id=#{trace_id} span_id=#{span_id} operation=#{operation}\n"
   end
 end

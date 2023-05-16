@@ -39,3 +39,7 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem "opentelemetry-sdk", "~> 1.2"
+gem "opentelemetry-instrumentation-all", "~> 0.35.0"
+gem "opentelemetry-exporter-otlp", "~> 0.24.0"

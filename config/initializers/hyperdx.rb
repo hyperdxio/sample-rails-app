@@ -20,4 +20,6 @@ Rails.application.configure do
     { "time" => time, "level" => severity, "message" => msg, "trace_id" => trace_id, "span_id" => span_id,
       "operation" => operation }.to_json + "\n"
   end
+
+  Rails.logger.info "Logger initialized !! 🐱"
 end

@@ -6,6 +6,14 @@
   <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+  <%= javascript_include_tag  '//www.unpkg.com/@hyperdx/browser@0.14.4/build/index.js' %>
+  <%= javascript_tag do %>
+    window.HyperDX.init({
+      apiKey: '1c2fb47f-c461-463b-8f76-2e330f082ad6',
+      service: 'web-app',
+      tracePropagationTargets: [/morning-journey-63810.herokuapp.com/i],
+    });
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>

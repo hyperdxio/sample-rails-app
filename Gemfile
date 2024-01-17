@@ -40,6 +40,13 @@ gem 'puma'
 # gem 'debugger', group: [:development, :test]
 
 
-gem "opentelemetry-sdk", "~> 1.2"
-gem "opentelemetry-instrumentation-all", "~> 0.35.0"
-gem "opentelemetry-exporter-otlp", "~> 0.24.0"
+gem "opentelemetry-sdk", "> 1.2"
+gem "opentelemetry-instrumentation-all", "> 0.35.0"
+gem "opentelemetry-exporter-otlp", "> 0.24.0"
+gem 'opentelemetry-instrumentation-net_http', git: 'https://github.com/hyperdxio/opentelemetry-ruby-contrib.git', branch: 'v0.22.2', glob: 'instrumentation/net_http/*.gemspec'
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "redis", "~> 5.0"
+
+gem 'ddtrace', require: 'ddtrace/auto_instrument'

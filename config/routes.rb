@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   get 'rolldice', to: 'dice#roll'
 
+  get 'external_request', to: 'external_request#index'
+
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 

@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/hyperdxio/opentelemetry-ruby-contrib.git
-  revision: e7125d5ec0171397510582f2f5f4fc5e887c1407
-  branch: main
+  revision: 174a34ce9847562de1f76df59334152b1473fe4e
+  branch: v0.22.2
   glob: instrumentation/net_http/*.gemspec
   specs:
-    opentelemetry-instrumentation-net_http (0.22.4)
+    opentelemetry-instrumentation-net_http (0.22.2)
       opentelemetry-api (~> 1.0)
       opentelemetry-common (~> 0.20.0)
       opentelemetry-instrumentation-base (~> 0.22.1)
